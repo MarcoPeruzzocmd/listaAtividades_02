@@ -5,11 +5,18 @@
     Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
     */
 
-    //ENTRADA
+    let numero1 = prompt('Informe um valor inteiro')
+    let numero2 = prompt('Informe um outro valor inteiro')
+    if (isNaN(numero1) || isNaN(numero2)) {
+        alert('Informe apenas números')
+    }
+    else {
+        const numero3 = numero1
+        numero1 = numero2
+        numero2 = numero3
+        alert(`O valor novo para o primeiro número é ${numero1}, sendo antes ${numero2}`)
+        alert(`O valor novo para o segundo número é ${numero3}, sendo antes ${numero1}`)
+    }
 
-    //PROCESSAMENTO
 
-    //SAÍDA
-
-    
 </script>

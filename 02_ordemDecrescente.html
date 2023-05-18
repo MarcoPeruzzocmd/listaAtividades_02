@@ -1,14 +1,13 @@
 <script>
-    /*
-    //PROBLEMA
-    Faça um script que leia três números e mostre-os em ordem decrescente.
-    */
+const num1 = Number(prompt('Informe o primeiro número'));
+const num2 = Number(prompt('Informe o segundo número'));
+const num3 = Number(prompt('Informe o terceiro número'));
 
-    //ENTRADA
+//PROCESSAMENTO
+const maior = Math.max(num1, num2, num3);
+const menor = Math.min(num1, num2, num3);
+const meio = num1 + num2 + num3 - maior - menor;
 
-    
-    //PROCESSAMENTO
-    
-    //SAÍDA
-    
+//SAÍDA
+alert(`Ordem decrescente: ${maior}, ${meio}, ${menor}`);
 </script>
