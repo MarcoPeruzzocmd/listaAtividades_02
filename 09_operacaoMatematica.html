@@ -11,40 +11,46 @@
     const numero1 = Number(prompt('Informe o primeiro número'))
     const numero2 = Number(prompt('Informe o segundo número'))
     const operacao = Number(prompt('Informe a operação usando + (adição), - (subtração), / (divisão), * (multiplicação)'))
-    let resultado
+    let resultado1
+    let resultado = Number(resultado1)
     let sinalnum
     let parouimpar
     let decimalouinteiro
     //PROCESSAMENTO
-    if (operacao === "+") {
-        resultado = numero1 + numero2
-    } 
-    else if (operacao === "-") {
-        resultado = numero1 - numero2
+    if (isNaN(numero1) || isNaN(numero2)) {
+        alert("repete")
     }
-    else if (operacao === "/") {
-        resultado = numero1 / numero2
-    }
-    else if (operacao === "*") {
-        resultado = numero1 * numero2
-    }
-    if (sinalnum > 0) {
-        sinalnum = "positivo"
-    }
-    else if (sinalnum < 0) {
-        sinalnum = "negativo"
-    }
-    if (parouimpar % 2 == 0) {
-        parouimpar = "par"
-    }
-    else if (parouimpar % 2 != 0) {
-        parouimpar = "ímpar"
-    }
-    if (decimalouinteiro % 1 == 0) {
-        decimalouinteiro = "inteiro"
-    } 
-    else if (decimalouinteiro % 1 !== 0) {
-        decimalouinteiro = "decimal"
+    else {
+        if (operacao == "+") {
+            resultado = numero1 + numero2
+        }
+        else if (operacao == "-") {
+            resultado = numero1 - numero2
+        }
+        else if (operacao == "/") {
+            resultado = numero1 / numero2
+        }
+        else if (operacao == "*") {
+            resultado = numero1 * numero2
+        }
+        if (resultado > 0) {
+            sinalnum = "positivo"
+        }
+        else if (resultado < 0) {
+            sinalnum = "negativo"
+        }
+        if (resultado % 2 == 0) {
+            parouimpar = "par"
+        }
+        else if (resultado % 2 != 0) {
+            parouimpar = "ímpar"
+        }
+        if (resultado % 1 == 0) {
+            decimalouinteiro = "inteiro"
+        }
+        else if (resultado % 1 !== 0) {
+            decimalouinteiro = "decimal"
+        }
     }
     //SAÍDA
     alert(`O resultado é ${resultado}, o número é ${sinalnum}, é ${parouimpar} e ${decimalouinteiro}`)
