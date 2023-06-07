@@ -14,12 +14,30 @@
     */
 
     //ENTRADA
-
-
+    const litros = prompt('Informe quantos litros de combustível foi adicionado ao seu veículo')
+    const tipo = prompt('Informe o tipo de combustível, utilizando A para álcool e G para gasolina').toUpperCase()    
     //PROCESSAMENTO
-
-    
+    const preçoA = 6.10
+    const preçoG = 6.50  
+    let valor
+    if (tipo === 'A') {
+        if (litros <= 20) {
+            valor = litros * preçoA * 0.97
+        }
+        else {
+            valor = litros * preçoA * 0.95
+        }
+    }
+    else if (tipo === 'G') {
+        if (litros <= 20) {
+            valor = litros * preçoG * 0.96
+        }
+        else {
+            valor = litros * preçoG * 0.94
+        }
+    }
     //SAÍDA
+    alert(`O valor a ser pago é ${valor.toFixed(2)}`)
 
 
 </script>

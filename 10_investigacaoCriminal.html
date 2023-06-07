@@ -11,8 +11,45 @@
     */
 
     //ENTRADA
-
+    alert('responda apenas com sim ou nao')
+    const telefonou = prompt('Telefonou para a vitima').toLowerCase()
+    const local = prompt('Esteve no local do crime?').toLowerCase()
+    const mora = prompt('Mora perto da vítima?').toLowerCase()
+    const devia = prompt('Devia para a vítima?').toLowerCase()
+    const trabalhou = prompt('Já trabalhou com a vítima?').toLowerCase()
+    let respostas = 0
+    let classificacao
     //PROCESSAMENTO
+    if (telefonou === 'sim') {
+        respostas += 1
+    }
+    if (local === 'sim') {
+        respostas += 1
+    }
+    if (mora === 'sim') {
+        respostas += 1
+    }
+    if (devia === 'sim') {
+        respostas += 1        
+    }
+    if (trabalhou === 'sim') {
+        respostas += 1   
+    }
+
+    if (respostas == 2) {
+        alert('suspeita')
+    }
+    else if (respostas == 3 || respostas == 4) {
+        alert('cumplice')
+    }
+    else if (respostas == 5) {
+        alert('assassino')
+    }
+    else {
+        alert('inocente')
+    }
+    
+    
 
     //SAÍDA
 
