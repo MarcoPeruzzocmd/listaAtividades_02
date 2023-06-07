@@ -3,8 +3,19 @@
     // Recebe um ano e informa se ele é bissexto ou não.
 
     // Entrada
-    
+    const ano = prompt ('Informe um ano')
     // Processamento
+    if (isNaN(ano)) {
+        alert('Informe apenas números')
+    }
+
+    else {
+    if (ano % 4 == 0) {
+        alert('Bissexto')
+    } 
+    else {
+        alert('Não é bissexto')
+    }}
 
     // Saída
 
