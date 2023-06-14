@@ -6,12 +6,41 @@
     */
 
     //ENTRADA
-
-
+    const hemisferio = prompt('Informe em qual hemisfério você está (Sul ou Norte)').toLowerCase()
+    const mes = prompt('Informe o mês que você está').toLowerCase()
     //PROCESSAMENTO
+    let estacao
+    if (hemisferio === 'norte') {
+        if (mes === 'dezembro' || mes === 'janeiro' || mes === 'fevereiro') {
+            estacao = 'Verão'
+        }
+        else if (mes === 'março' || mes === 'abril' || mes === 'maio') [
+            estacao = 'Outono'
+        ]
+        else if (mes === 'junho' || mes === 'julho' || mes === 'agosto') {
+            estacao = 'Inverno'
+        }
+        else if (mes === 'setembro' || mes === 'outubro' || mes === 'novembro') {
+            estacao = 'Primavera'
+        }
+    }
+   
+    else if (hemisferio === 'sul') {
+    if (mes === 'dezembro' || mes === 'janeiro' || mes === 'fevereiro') {
+        estacao = 'Verão';
+    } else if (mes === 'março' || mes === 'abril' || mes === 'maio') {
+        estacao = 'Outono';
+    } else if (mes === 'junho' || mes === 'julho' || mes === 'agosto') {
+        estacao = 'Inverno';
+    } else if (mes === 'setembro' || mes === 'outubro' || mes === 'novembro') {
+        estacao = 'Primavera';
+    } 
+}
 
     
     //SAÍDA
+    alert(`No hemisfério ${hemisferio}, o mês de ${mes} corresponde à estação ${estacao}`);
+
 
 
 </script>
