@@ -1,16 +1,4 @@
 <script>
-    /*
-    //PROBLEMA
-    Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
-    - "Telefonou para a vítima?"
-    - "Esteve no local do crime?"
-    - "Mora perto da vítima?"
-    - "Devia para a vítima?"
-    - "Já trabalhou com a vítima?"
-    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
-    */
-
-    //ENTRADA
     alert('responda apenas com sim ou nao')
     const telefonou = prompt('Telefonou para a vitima').toLowerCase()
     const local = prompt('Esteve no local do crime?').toLowerCase()
@@ -18,39 +6,13 @@
     const devia = prompt('Devia para a vítima?').toLowerCase()
     const trabalhou = prompt('Já trabalhou com a vítima?').toLowerCase()
     let respostas = 0
-    let classificacao
-    //PROCESSAMENTO
-    if (telefonou === 'sim') {
-        respostas += 1
-    }
-    if (local === 'sim') {
-        respostas += 1
-    }
-    if (mora === 'sim') {
-        respostas += 1
-    }
-    if (devia === 'sim') {
-        respostas += 1        
-    }
-    if (trabalhou === 'sim') {
-        respostas += 1   
-    }
-
-    if (respostas == 2) {
-        alert('suspeita')
-    }
-    else if (respostas == 3 || respostas == 4) {
-        alert('cumplice')
-    }
-    else if (respostas == 5) {
-        alert('assassino')
-    }
-    else {
-        alert('inocente')
-    }
-    
-    
-
-    //SAÍDA
-
+    if (telefonou === 'sim') {respostas += 1}
+    if (local === 'sim') {respostas += 1}
+    if (mora === 'sim') {respostas += 1}
+    if (devia === 'sim') {respostas += 1}
+    if (trabalhou === 'sim') {respostas += 1}
+    if (respostas == 2) {alert('suspeita')}
+    else if (respostas == 3 || respostas == 4) {alert('cumplice')}
+    else if (respostas == 5) {alert('assassino')}
+    else {alert('inocente')}
 </script>

@@ -1,43 +1,27 @@
 <script>
-//ENTRADA
-const numero1 = Number(prompt('Informe o primeiro número').trim().replace(",", "."));
-const numero2 = Number(prompt('Informe o segundo número').trim().replace(",", "."));
-const operacao = prompt('Informe a operação usando + (adição), - (subtração), / (divisão), * (multiplicação)');
+    const numero1 = Number(prompt('Informe o primeiro número').trim().replace(",", "."));
+    const numero2 = Number(prompt('Informe o segundo número').trim().replace(",", "."));
+    const operacao = prompt('Informe a operação usando + (adição), - (subtração), / (divisão), * (multiplicação)');
+    let resultado;
+    let sinalnum;
+    let parouimpar;
+    let decimalouinteiro;
+    if (isNaN(numero1) || isNaN(numero2)) { alert("Digite números válidos!"); }
+    else {
+        if (operacao === "+") { resultado = numero1 + numero2; }
+        else if (operacao === "-") { resultado = numero1 - numero2; }
+        else if (operacao === "/") { resultado = numero1 / numero2; }
+        else if (operacao === "*") { resultado = numero1 * numero2; }
 
-let resultado;
-let sinalnum;
-let parouimpar;
-let decimalouinteiro;
+        if (resultado > 0) { sinalnum = "positivo"; }
+        else if (resultado < 0) { sinalnum = "negativo"; }
+        else { sinalnum = "zero"; }
 
-//PROCESSAMENTO
-if (isNaN(numero1) || isNaN(numero2)) {
-    alert("Digite números válidos!");
-} else {
-    if (operacao === "+") {
-        resultado = numero1 + numero2;
-    } else if (operacao === "-") {
-        resultado = numero1 - numero2;
-    } else if (operacao === "/") {
-        resultado = numero1 / numero2;
-    } else if (operacao === "*") {
-        resultado = numero1 * numero2;
+        if (Number.isInteger(resultado)) { decimalouinteiro = "inteiro"; }
+        else { decimalouinteiro = "decimal"; }
+
+        if (resultado % 2 === 0) { parouimpar = "par"; }
+        else { parouimpar = "ímpar"; }
     }
-
-    if (resultado > 0) {
-        sinalnum = "positivo";
-    } else if (resultado < 0) {
-        sinalnum = "negativo";
-    } else {sinalnum = "zero";}
-
-    if (Number.isInteger(resultado)) {
-        decimalouinteiro = "inteiro";
-    } else {decimalouinteiro = "decimal";}
-
-    if (resultado % 2 === 0) {
-        parouimpar = "par";
-    } else {parouimpar = "ímpar";}
-}
-
-//SAÍDA
-alert(`O resultado é ${resultado}, o número é ${sinalnum}, é ${parouimpar} e ${decimalouinteiro}.`);
+    alert(`O resultado é ${resultado}, o número é ${sinalnum}, é ${parouimpar} e ${decimalouinteiro}.`);
 </script>
